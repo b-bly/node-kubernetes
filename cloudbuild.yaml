@@ -1,5 +1,14 @@
 steps:
-  - name: 'ubuntu'
-    args: ['echo', 'hello world']
+  # Build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "${_REGISTRY_URL}/$PROJECT_ID/${_REGISTRY}/helloworld:$SHORT_SHA",
+        "-t",
+        "${_REGISTRY_URL}/$PROJECT_ID/${_REGISTRY}/helloworld:latest",
+        ".",
+      ]
 options:
   logging: CLOUD_LOGGING_ONLY
