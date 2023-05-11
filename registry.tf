@@ -12,8 +12,9 @@ resource "google_project_service" "service" {
 
 resource "google_artifact_registry_repository" "my-repository" {
     provider        = google-beta
+    project         = var.project
     location        = var.region
-    repository_id   = "my-repository"
+    repository_id   = var.github_repository
     format          = "DOCKER"
     depends_on      = [google_project_service.service["artifactregistry.googleapis.com"]
  ]

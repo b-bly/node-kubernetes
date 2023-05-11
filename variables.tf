@@ -11,9 +11,9 @@ variable "github_owner" {
 }
 
 variable "github_branch" {
-    default = "^master$"
+    default = "^main$"
 }
 
 variable "project" {
-    default = "node-kubernetes"
+    default = "node-kubernetes-349713"
 }

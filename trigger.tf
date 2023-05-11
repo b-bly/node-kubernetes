@@ -1,6 +1,8 @@
-resource "google_cloudbuild_trigger" "my-trigger" {
+resource "google_cloudbuild_trigger" "filename-trigger" {
     provider = google-beta
     name = "hello-world"
+    location = "us-central1"
+    project = var.project
 
     github {
         name = var.github_repository
@@ -11,7 +13,7 @@ resource "google_cloudbuild_trigger" "my-trigger" {
     }
 
     substitutions = {
-        _REGISTRY       = google_artifact_registry_repository.${var.github_repository}.repository_id
+        _REGISTRY       = "google_artifact_registry_repository.${var.github_repository}.repository_id"
         _REGISTRY_URL   = "${var.region}-docker.pkg.dev"
     }
 
