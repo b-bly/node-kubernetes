@@ -1,0 +1,1 @@
+kubectl delete -f node-kubernetes/node.yaml
