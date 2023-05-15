@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: node-kubernetes
-        image: us-central1-docker.pkg.dev/node-kubernetes-349713/node-kubernetes/helloworld:fecc224
+        image: us-central1-docker.pkg.dev/node-kubernetes-349713/node-kubernetes/helloworld:latest
         ports:
           - containerPort: 3000
         env:

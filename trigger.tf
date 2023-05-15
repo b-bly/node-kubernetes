@@ -1,7 +1,7 @@
 resource "google_cloudbuild_trigger" "filename-trigger" {
     provider = google-beta
     name = "hello-world"
-    location = "us-central1"
+    location = var.region
     project = var.project
 
     github {
