@@ -13,7 +13,7 @@ steps:
     args:
       [
         "push",
-        "${_REGISTRY_URL}/$PROJECT_ID/${_REGISTRY}/helloworld:latest",
+        "${_REGISTRY_URL}/$PROJECT_ID/${_REGISTRY}/helloworld",
       ]
   # Deploy container image to GKE
   - name: "gcr.io/cloud-builders/gke-deploy"
