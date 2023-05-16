@@ -13,8 +13,8 @@ resource "google_cloudbuild_trigger" "filename-trigger" {
     }
 
     substitutions = {
-        _REGISTRY       = "google_artifact_registry_repository.${var.github_repository}.repository_id"
-        _REGISTRY_URL   = "${var.region}-docker.pkg.dev"
+        _REGISTRY_URL: "us-central1-docker.pkg.dev"
+        _REGISTRY: "node-kubernetes"
     }
 
     filename = "cloudbuild.yaml"
