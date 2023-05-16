@@ -17,5 +17,7 @@ resource "google_cloudbuild_trigger" "filename-trigger" {
         _REGISTRY: "node-kubernetes"
     }
 
+    service_account = "development@node-kubernetes-349713.iam.gserviceaccount.com"
+
     filename = "cloudbuild.yaml"
 }
