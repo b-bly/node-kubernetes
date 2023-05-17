@@ -2,7 +2,7 @@ resource "google_cloudbuild_trigger" "filename-trigger" {
     provider = google-beta
     name = "hello-world"
     location = var.region
-    project = var.project
+    project = var.project_id
 
     github {
         name = var.github_repository

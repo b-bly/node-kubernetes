@@ -14,6 +14,6 @@ variable "github_branch" {
     default = "^main$"
 }
 
-variable "project" {
+variable "project_id" {
     default = "node-kubernetes-349713"
 }
